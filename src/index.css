@@ -962,3 +962,122 @@ img {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================================
+   Responsive & Mobile Styles
+   ========================================================================== */
+@media (max-width: 900px) {
+    /* Header & Navigation */
+    .mobile-nav-toggle {
+        display: block;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 2000;
+        position: relative;
+    }
+    
+    .hamburger {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--clr-neutral-900);
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: var(--clr-neutral-900);
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .hamburger::before { top: -8px; }
+    .hamburger::after { top: 8px; }
+    
+    .mobile-nav-toggle[aria-expanded="true"] .hamburger {
+        background: transparent;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"] .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"] .hamburger::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(20vh, 8rem) 2em;
+        background: var(--clr-bg-glass);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    
+    .nav-link {
+        font-size: var(--fs-500);
+        color: var(--clr-neutral-900);
+    }
+    
+    .btn-contact {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Layout Adjustments */
+    .section {
+        padding-block: var(--space-xl);
+    }
+
+    :root {
+        --fs-900: 2.5rem;
+        --fs-800: 2rem;
+        --fs-700: 1.75rem;
+        --fs-600: 1.25rem;
+        --space-xxl: 4rem;
+        --space-xl: 3rem;
+    }
+    
+    .admission-grid, .contact-grid, .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .primary-navigation {
+        inset: 0 0 0 10%;
+    }
+    
+    .course-card, .service-card {
+        padding: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
