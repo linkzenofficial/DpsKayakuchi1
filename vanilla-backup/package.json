@@ -1,0 +1,8 @@
+{
+  "name": "dps-kayakuchi",
+  "version": "1.0.0",
+  "description": "DPS Kayakuchi School Website",
+  "scripts": {
+    "dev": "npx live-server ./"
+  }
+}
