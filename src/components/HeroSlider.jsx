@@ -5,8 +5,19 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const HeroSlider = () => {
+    const notices = [
+        { date: '15 Jul', text: 'Admissions open for the academic year 2026-27. Apply now!' },
+        { date: '12 Jul', text: 'Parent-Teacher Meeting scheduled for next Saturday.' },
+        { date: '10 Jul', text: 'Annual Sports Day results announced on notice board.' },
+        { date: '05 Jul', text: 'School closed on Monday due to local festival.' },
+        { date: '01 Jul', text: 'New extracurricular activities starting this month.' },
+    ];
+
     return (
-        <div id="home" className="hero-slider-wrapper">
+        <div id="home" className="hero-split-layout">
+            
+            {/* Left Side: Main Slider */}
+            <div className="hero-slider-wrapper">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation
@@ -64,6 +75,25 @@ const HeroSlider = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
+            </div>
+
+            
+            {/* Right Side: Notice Board */}
+            <div className="hero-notice-board">
+                <div className="notice-header">
+                    <h3>🔔 Latest Updates</h3>
+                </div>
+                <div className="notice-body">
+                    <div className="notice-scroll-container">
+                        {[...notices, ...notices].map((notice, index) => (
+                            <div key={index} className="notice-item">
+                                <span className="notice-date">{notice.date}</span>
+                                <p className="notice-text">{notice.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

@@ -10,7 +10,7 @@ import Course from './components/Course';
 import Teachers from './components/Teachers';
 import Admission from './components/Admission';
 import Gallery from './components/Gallery';
-import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -41,8 +41,8 @@ function App() {
         <Teachers />
         <Admission />
         <Gallery />
-        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
