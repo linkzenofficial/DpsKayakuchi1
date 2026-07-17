@@ -9,7 +9,7 @@ const Teachers = () => {
     return (
         <section id="teachers" className="section" style={{ backgroundColor: 'var(--clr-neutral-200)', paddingTop: '100px' }}>
             <div className="container">
-                <div className="section-header text-center">
+                <div className="section-header text-center" data-aos="fade-up">
                     <span className="badge" style={{ display: 'inline-block', marginBottom: '1rem' }}>Our Faculty</span>
                     <h2 className="section-title">Meet Our Exceptional Teachers</h2>
                     <p className="section-description" style={{ maxWidth: '700px', margin: '0 auto', marginTop: '1rem' }}>
@@ -19,7 +19,7 @@ const Teachers = () => {
 
                 <div className="teachers-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginTop: '3rem' }}>
                     {teachersList.map((teacher, index) => (
-                        <div key={index} className="teacher-card glass-panel" style={{ borderRadius: '1rem', overflow: 'hidden', textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
+                        <div key={index} className="teacher-card glass-panel" data-aos="fade-up" data-aos-delay={index * 100} style={{ borderRadius: '1rem', overflow: 'hidden', textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
                             <div className="teacher-img-wrapper" style={{ height: '280px', overflow: 'hidden' }}>
                                 <img src={teacher.image} alt={teacher.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} className="teacher-img" />
                             </div>

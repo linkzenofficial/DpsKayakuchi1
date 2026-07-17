@@ -4,12 +4,12 @@ const Gallery = () => {
     const [activeTab, setActiveTab] = useState('all');
 
     const galleryImages = [
-        { id: 1, category: 'campus', url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Main Building' },
-        { id: 2, category: 'sports', url: 'https://images.unsplash.com/photo-1576226270054-d8333e9b1701?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Annual Sports Day' },
-        { id: 3, category: 'events', url: 'https://images.unsplash.com/photo-1523580494112-021d227918a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Science Exhibition' },
-        { id: 4, category: 'campus', url: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Library Study Area' },
-        { id: 5, category: 'sports', url: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Football Tournament' },
-        { id: 6, category: 'events', url: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Cultural Festival' },
+        { id: 1, category: 'campus', url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Main Building' },
+        { id: 2, category: 'sports', url: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Annual Sports Day' },
+        { id: 3, category: 'events', url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Science Exhibition' },
+        { id: 4, category: 'campus', url: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Library Study Area' },
+        { id: 5, category: 'sports', url: 'https://images.unsplash.com/photo-1518605363189-22a84397be98?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Football Tournament' },
+        { id: 6, category: 'events', url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', title: 'Cultural Festival' },
     ];
 
     const filteredImages = activeTab === 'all' 
@@ -19,7 +19,7 @@ const Gallery = () => {
     return (
         <section id="gallery" className="section" style={{ backgroundColor: 'white', paddingTop: '100px' }}>
             <div className="container">
-                <div className="section-header text-center">
+                <div className="section-header text-center" data-aos="fade-up">
                     <span className="badge" style={{ display: 'inline-block', marginBottom: '1rem' }}>Our Memories</span>
                     <h2 className="section-title">School Gallery</h2>
                     <p className="section-description" style={{ maxWidth: '700px', margin: '0 auto', marginTop: '1rem' }}>
@@ -53,8 +53,8 @@ const Gallery = () => {
 
                 {/* Image Grid */}
                 <div className="gallery-masonry" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
-                    {filteredImages.map((image) => (
-                        <div key={image.id} className="gallery-item" style={{ position: 'relative', overflow: 'hidden', borderRadius: '1rem', height: '250px', cursor: 'pointer' }}>
+                    {filteredImages.map((image, index) => (
+                        <div key={image.id} className="gallery-item" data-aos="zoom-in" data-aos-delay={index * 50} style={{ position: 'relative', overflow: 'hidden', borderRadius: '1rem', height: '250px', cursor: 'pointer' }}>
                             <img 
                                 src={image.url} 
                                 alt={image.title} 

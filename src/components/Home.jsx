@@ -1,18 +1,18 @@
 const Home = () => {
     return (
-        <section id="home">
+        <section id="vision">
             {/* Vision & Mission Section */}
             <div className="section" style={{ position: 'relative', zIndex: 1, minHeight: '100vh', display: 'flex', alignItems: 'center', background: 'var(--clr-neutral-100)', overflow: 'hidden' }}>
                 
                 {/* Decorative background blobs */}
-                <div style={{ position: 'absolute', top: '-10%', left: '-10%', width: '300px', height: '300px', background: 'linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(236, 72, 153, 0.2))', borderRadius: '50%', filter: 'blur(60px)', zIndex: -1 }}></div>
-                <div style={{ position: 'absolute', bottom: '-10%', right: '-5%', width: '400px', height: '400px', background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(79, 70, 229, 0.15))', borderRadius: '50%', filter: 'blur(80px)', zIndex: -1 }}></div>
+                <div style={{ position: 'absolute', top: '-10%', left: '-10%', width: '300px', height: '300px', background: 'linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(236, 72, 153, 0.2))', borderRadius: '50%', filter: 'blur(60px)', zIndex: -1 }} data-aos="zoom-in" data-aos-duration="1500"></div>
+                <div style={{ position: 'absolute', bottom: '-10%', right: '-5%', width: '400px', height: '400px', background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(79, 70, 229, 0.15))', borderRadius: '50%', filter: 'blur(80px)', zIndex: -1 }} data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300"></div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <div className="vision-mission-grid">
                         
                         {/* Our Vision Box */}
-                        <div className="creative-card vision-card">
+                        <div className="creative-card vision-card" data-aos="fade-up" data-aos-delay="100">
                             <div className="card-icon-wrapper">
                                 <span className="card-icon">👁️</span>
                             </div>
@@ -23,7 +23,7 @@ const Home = () => {
                         </div>
 
                         {/* Our Mission Box */}
-                        <div className="creative-card mission-card">
+                        <div className="creative-card mission-card" data-aos="fade-up" data-aos-delay="200">
                             <div className="card-icon-wrapper">
                                 <span className="card-icon">🚀</span>
                             </div>

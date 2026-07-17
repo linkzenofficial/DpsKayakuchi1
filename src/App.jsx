@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
 import Home from './components/Home';
@@ -19,25 +21,27 @@ function App() {
     if (hash && ['home', 'about', 'facilities', 'course', 'teachers', 'admission', 'gallery', 'contact'].includes(hash)) {
       setActiveSection(hash);
     }
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: false,
+      easing: 'ease-out-cubic',
+    });
   }, []);
 
   return (
     <>
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
-        {activeSection === 'home' && (
-          <>
-            <HeroSlider />
-            <Home />
-          </>
-        )}
-        {activeSection === 'about' && <About />}
-        {activeSection === 'facilities' && <Facilities />}
-        {activeSection === 'course' && <Course />}
-        {activeSection === 'teachers' && <Teachers />}
-        {activeSection === 'admission' && <Admission />}
-        {activeSection === 'gallery' && <Gallery />}
-        {activeSection === 'contact' && <Contact />}
+        <HeroSlider />
+        <Home />
+        <About />
+        <Facilities />
+        <Course />
+        <Teachers />
+        <Admission />
+        <Gallery />
+        <Contact />
       </main>
     </>
   );

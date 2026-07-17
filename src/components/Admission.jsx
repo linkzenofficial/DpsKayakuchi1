@@ -9,7 +9,7 @@ const Admission = () => {
     return (
         <section id="admission" className="section" style={{ backgroundColor: 'var(--clr-neutral-100)', paddingTop: '100px' }}>
             <div className="container">
-                <div className="section-header text-center">
+                <div className="section-header text-center" data-aos="fade-up">
                     <span className="badge" style={{ display: 'inline-block', marginBottom: '1rem' }}>Join Us</span>
                     <h2 className="section-title">Admission Process</h2>
                     <p className="section-description" style={{ maxWidth: '700px', margin: '0 auto', marginTop: '1rem' }}>
@@ -20,11 +20,11 @@ const Admission = () => {
                 <div className="admission-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', marginTop: '3rem', alignItems: 'flex-start' }}>
                     
                     {/* Process Steps */}
-                    <div>
+                    <div data-aos="fade-right" data-aos-delay="100">
                         <h3 style={{ marginBottom: '2rem', fontSize: '1.8rem', color: 'var(--clr-neutral-900)' }}>Steps to Apply</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             {steps.map((step, index) => (
-                                <div key={index} style={{ display: 'flex', gap: '1.5rem', background: 'white', padding: '1.5rem', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                                <div key={index} data-aos="fade-up" data-aos-delay={index * 150} style={{ display: 'flex', gap: '1.5rem', background: 'white', padding: '1.5rem', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', border: '1px solid rgba(0,0,0,0.05)' }}>
                                     <div style={{ width: '50px', height: '50px', backgroundColor: 'var(--clr-primary-500)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontSize: '1.2rem', fontWeight: 'bold', flexShrink: 0 }}>
                                         {step.number}
                                     </div>
@@ -38,7 +38,7 @@ const Admission = () => {
                     </div>
 
                     {/* Quick Enquiry Form */}
-                    <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, var(--clr-neutral-900), var(--clr-primary-500))', color: 'white' }}>
+                    <div className="glass-panel" data-aos="fade-left" data-aos-delay="200" style={{ padding: '2.5rem', borderRadius: '1rem', background: 'linear-gradient(135deg, var(--clr-neutral-900), var(--clr-primary-500))', color: 'white' }}>
                         <h3 style={{ marginBottom: '1.5rem', fontSize: '1.8rem' }}>Quick Enquiry</h3>
                         <p style={{ marginBottom: '2rem', opacity: 0.8 }}>Have questions? Leave your details and our admission counselor will call you back.</p>
                         

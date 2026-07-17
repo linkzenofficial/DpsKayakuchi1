@@ -32,7 +32,11 @@ const Header = ({ activeSection, setActiveSection }) => {
         e.preventDefault();
         setActiveSection(id);
         setMobileMenuOpen(false);
-        window.scrollTo(0, 0);
+        const element = document.getElementById(id);
+        if (element) {
+            const y = element.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
     };
 
     return (

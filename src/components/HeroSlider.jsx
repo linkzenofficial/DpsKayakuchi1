@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 
 const HeroSlider = () => {
     return (
-        <div className="hero-slider-wrapper">
+        <div id="home" className="hero-slider-wrapper">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation
@@ -18,7 +18,7 @@ const HeroSlider = () => {
                 {/* Slide 1 */}
                 <SwiperSlide>
                     <div className="slide-content">
-                        <div className="slide-bg" style={{ backgroundImage: `url('/assets/hero1.png')` }}></div>
+                        <div className="slide-bg" style={{ backgroundImage: `url('./assets/hero1.png')` }}></div>
                         <div className="slide-overlay"></div>
                         <div className="slide-text container">
                             <span className="badge">Welcome to DPS Kayakuchi</span>
@@ -35,7 +35,7 @@ const HeroSlider = () => {
                 {/* Slide 2 */}
                 <SwiperSlide>
                     <div className="slide-content">
-                        <div className="slide-bg" style={{ backgroundImage: `url('/assets/hero2.png')` }}></div>
+                        <div className="slide-bg" style={{ backgroundImage: `url('./assets/hero2.png')` }}></div>
                         <div className="slide-overlay"></div>
                         <div className="slide-text container">
                             <span className="badge">Excellence in Learning</span>
@@ -51,7 +51,7 @@ const HeroSlider = () => {
                 {/* Slide 3 */}
                 <SwiperSlide>
                     <div className="slide-content">
-                        <div className="slide-bg" style={{ backgroundImage: `url('/assets/hero3.png')` }}></div>
+                        <div className="slide-bg" style={{ backgroundImage: `url('./assets/hero3.png')` }}></div>
                         <div className="slide-overlay"></div>
                         <div className="slide-text container">
                             <span className="badge">Beyond Academics</span>

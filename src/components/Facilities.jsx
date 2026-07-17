@@ -5,7 +5,7 @@ const Facilities = () => {
             <div className="bg-blob-1" style={{ bottom: '10%', left: '-5%', width: '300px', height: '300px' }}></div>
             
             <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-                <div className="section-header text-center">
+                <div className="section-header text-center" data-aos="fade-up">
                     <h2 className="section-title">World-Class Facilities</h2>
                     <p className="section-description" style={{ maxWidth: '800px', margin: '0 auto', marginTop: '1rem' }}>
                         Our campus is equipped with state-of-the-art infrastructure to provide an optimal learning environment. We believe in providing resources that empower students to explore, innovate, and excel.
@@ -15,7 +15,7 @@ const Facilities = () => {
                 <div className="vision-mission-grid" style={{ marginBottom: 'var(--space-xxl)', gap: '4rem' }}>
                     
                     {/* Facility 1 */}
-                    <div className="creative-card vision-card">
+                    <div className="creative-card vision-card" data-aos="fade-up" data-aos-delay="100">
                         <div className="card-icon-wrapper">
                             <span className="card-icon">📚</span>
                         </div>
@@ -26,7 +26,7 @@ const Facilities = () => {
                     </div>
 
                     {/* Facility 2 */}
-                    <div className="creative-card mission-card">
+                    <div className="creative-card mission-card" data-aos="fade-up" data-aos-delay="200">
                         <div className="card-icon-wrapper">
                             <span className="card-icon">🔬</span>
                         </div>
@@ -37,7 +37,7 @@ const Facilities = () => {
                     </div>
 
                     {/* Facility 3 */}
-                    <div className="creative-card vision-card">
+                    <div className="creative-card vision-card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-icon-wrapper">
                             <span className="card-icon">💻</span>
                         </div>
@@ -48,7 +48,7 @@ const Facilities = () => {
                     </div>
 
                     {/* Facility 4 */}
-                    <div className="creative-card mission-card">
+                    <div className="creative-card mission-card" data-aos="fade-up" data-aos-delay="100">
                         <div className="card-icon-wrapper">
                             <span className="card-icon">⚽</span>
                         </div>
@@ -59,7 +59,7 @@ const Facilities = () => {
                     </div>
 
                     {/* Facility 5 */}
-                    <div className="creative-card vision-card">
+                    <div className="creative-card vision-card" data-aos="fade-up" data-aos-delay="200">
                         <div className="card-icon-wrapper">
                             <span className="card-icon">🎨</span>
                         </div>
@@ -70,7 +70,7 @@ const Facilities = () => {
                     </div>
 
                     {/* Facility 6 */}
-                    <div className="creative-card mission-card">
+                    <div className="creative-card mission-card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-icon-wrapper">
                             <span className="card-icon">🚌</span>
                         </div>

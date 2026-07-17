@@ -20,6 +20,7 @@ const Course = () => {
                         {/* Academic Box */}
                         <div 
                             className="creative-card"
+                            data-aos="fade-right"
                             style={{ 
                                 display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px', cursor: 'pointer', 
                                 background: showAcademic ? 'linear-gradient(135deg, var(--clr-primary-400), var(--clr-primary-500))' : 'rgba(255, 255, 255, 0.7)',
@@ -63,6 +64,7 @@ const Course = () => {
                         {/* Non-Academic Box */}
                         <div 
                             className="creative-card"
+                            data-aos="fade-left"
                             style={{ 
                                 display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px', cursor: 'pointer', 
                                 background: showNonAcademic ? 'linear-gradient(135deg, var(--clr-secondary-400), hsl(330, 80%, 50%))' : 'rgba(255, 255, 255, 0.7)',
