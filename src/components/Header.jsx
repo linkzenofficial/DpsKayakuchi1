@@ -37,6 +37,22 @@ const Header = ({ activeSection, setActiveSection }) => {
 
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''}`} id="header">
+            {/* Top Header */}
+            <div className="top-header">
+                <div className="container top-header-container">
+                    <div className="contact-info">
+                        <span>📞 +91 9876543210</span>
+                        <span>✉️ info@dpskayakuchi.com</span>
+                    </div>
+                    <div className="social-links-top">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Main Header */}
             <div className="container nav-container">
                 <div className="logo">
                     <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>

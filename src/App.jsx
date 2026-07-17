@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
+import HeroSlider from './components/HeroSlider';
 import Home from './components/Home';
 import About from './components/About';
 import Service from './components/Service';
@@ -21,7 +22,12 @@ function App() {
     <>
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
-        {activeSection === 'home' && <Home />}
+        {activeSection === 'home' && (
+          <>
+            <HeroSlider />
+            <Home />
+          </>
+        )}
         {activeSection === 'about' && <About />}
         {activeSection === 'service' && <Service />}
         {activeSection === 'course' && <Course />}
