@@ -20,11 +20,11 @@ const Header = ({ activeSection, setActiveSection }) => {
     const navLinks = [
         { id: 'home', label: 'Home' },
         { id: 'about', label: 'About Us' },
-        { id: 'service', label: 'Our Service' },
-        { id: 'enquiry', label: 'Enquiry' },
-        { id: 'course', label: 'Our Course' },
-        { id: 'admission', label: 'Admission' },
-        { id: 'gallery', label: 'Gallery' },
+        { id: 'facilities', label: 'Facilities' },
+        { id: 'course', label: 'Our Courses' },
+        { id: 'teachers', label: 'Our Teachers' },
+        { id: 'admission', label: 'Admission Process' },
+        { id: 'gallery', label: 'School Gallery' },
         { id: 'contact', label: 'Contact Us', isButton: true }
     ];
 
