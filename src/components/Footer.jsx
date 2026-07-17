@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer id="contact" style={{ backgroundColor: 'var(--clr-neutral-900)', color: 'white', paddingTop: '4rem' }}>
+        <footer id="contact" style={{ backgroundColor: 'var(--clr-neutral-200)', color: 'white', paddingTop: '4rem' }}>
             <div className="container">
                 <div className="footer-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
                     

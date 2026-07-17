@@ -17,7 +17,7 @@ const Gallery = () => {
         : galleryImages.filter(img => img.category === activeTab);
 
     return (
-        <section id="gallery" className="section" style={{ backgroundColor: 'white', paddingTop: '100px' }}>
+        <section id="gallery" className="section" style={{ paddingTop: '100px' }}>
             <div className="container">
                 <div className="section-header text-center" data-aos="fade-up">
                     <span className="badge" style={{ display: 'inline-block', marginBottom: '1rem' }}>Our Memories</span>
@@ -42,7 +42,7 @@ const Gallery = () => {
                                 textTransform: 'capitalize',
                                 transition: 'all 0.3s ease',
                                 backgroundColor: activeTab === tab ? 'var(--clr-primary-500)' : 'var(--clr-neutral-200)',
-                                color: activeTab === tab ? 'white' : 'var(--clr-neutral-800)',
+                                color: activeTab === tab ? 'white' : 'var(--clr-neutral-900)',
                                 boxShadow: activeTab === tab ? 'var(--shadow-md)' : 'none'
                             }}
                         >

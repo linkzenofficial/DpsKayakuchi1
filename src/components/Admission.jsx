@@ -24,7 +24,7 @@ const Admission = () => {
                         <h3 style={{ marginBottom: '2rem', fontSize: '1.8rem', color: 'var(--clr-neutral-900)' }}>Steps to Apply</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             {steps.map((step, index) => (
-                                <div key={index} data-aos="fade-up" data-aos-delay={index * 150} style={{ display: 'flex', gap: '1.5rem', background: 'white', padding: '1.5rem', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                                <div key={index} data-aos="fade-up" data-aos-delay={index * 150} style={{ display: 'flex', gap: '1.5rem', background: 'var(--clr-bg-glass)', padding: '1.5rem', borderRadius: '1rem', boxShadow: 'var(--shadow-sm)', border: '1px solid rgba(255,255,255,0.1)' }}>
                                     <div style={{ width: '50px', height: '50px', backgroundColor: 'var(--clr-primary-500)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', fontSize: '1.2rem', fontWeight: 'bold', flexShrink: 0 }}>
                                         {step.number}
                                     </div>
@@ -62,7 +62,7 @@ const Admission = () => {
                                     <option value="senior">Senior Secondary (Class 11-12)</option>
                                 </select>
                             </div>
-                            <button type="submit" className="btn btn-secondary" style={{ marginTop: '1rem', backgroundColor: 'white', color: 'var(--clr-primary-500)', border: 'none' }}>
+                            <button type="submit" className="btn btn-secondary" style={{ marginTop: '1rem', backgroundColor: 'var(--clr-neutral-100)', color: 'white', border: 'none' }}>
                                 Submit Enquiry
                             </button>
                         </form>
